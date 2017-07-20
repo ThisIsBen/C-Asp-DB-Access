@@ -1,0 +1,14 @@
+
+2017-07-20 22:22:28 ： 查詢函式 「Delete from ScoreItem where StuCouHWDe_ID = '112' 」
+			錯誤內容「System.Data.SqlClient.SqlException (0x80131904): 無效的物件名稱 'ScoreItem'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 CsDBConnection.ExecuteNonQuery(String sql) 於 C:\Users\Administrator\Documents\Visual Studio 2015\WebSites\ScoreAnalysis\App_Code\DB\CsDBConnection.cs: 行 22
+ClientConnectionId:2e408218-ec05-4fda-a547-cc4cb9af9b64
+Error Number:208,State:1,Class:16」
+
