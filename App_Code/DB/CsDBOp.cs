@@ -10,15 +10,7 @@ using System.Threading.Tasks;
 
     public class CsDBOp
     {
-        private static string SCORE_TRANSACTION = "scoretransaction";
-        private static string SCOREITEM_TRANSACTION = "scoreitemtransaction";
-        private static string GROUP_TRANSACTION = "grouptransaction";
-        private static string REVIEWERGROUP_TRANSACTION = "reviewergrouptransaction";
-        private static string DISPLAYITEM_TRANSACTION = "displayitemtransaction";
-        private static string FORMINSERT_TRANSACTION = "forminfotransaction";
-        private static string SCOREITEMFORDISPLAY_TRANSACTION = "scoreitemfordisplaytransaction";
-        
-
+       
         #region Common
         private static DataTable GetDataTable(string sql)
         {
@@ -61,26 +53,26 @@ using System.Threading.Tasks;
         /// <param name="token"></param>
         /// <returns></returns>
         public static DataTable GetAllTBData() {
-            string sql = string.Format("Select * From ScoreDetailTB ");
+            string sql = string.Format("Select * From ScoreDetail ");
             return GetDataTable(sql);
         }
         
 
         public static int InsertScore(string ID,string grade)
         {
-            string  sql = string.Format("Insert into ScoreDetailTB VALUES( '{0}', '{1}' )", ID,grade);
+            string  sql = string.Format("Insert into ScoreDetail VALUES( '{0}', '{1}' )", ID,grade);
             return InsertData(sql);
         }
 
     public static int UpdateScore(string ID, string NewGrade)
     {
-        string sql = string.Format("Update ScoreDetailTB set Grade = ' {1:d} ' where StuCouHWDe_ID = '{0}'  ", ID, NewGrade);
+        string sql = string.Format("Update ScoreDetail set Grade = ' {1:d} ' where StuCouHWDe_ID = '{0}'  ", ID, NewGrade);
         return UpdateData(sql);
     }
 
     public static int DeleteScore(string ID)
     {
-        string sql = string.Format("Delete from ScoreDetailTB where StuCouHWDe_ID = '{0}' ", ID);
+        string sql = string.Format("Delete from ScoreDetail where StuCouHWDe_ID = '{0}' ", ID);
         return UpdateData(sql);
     }
 

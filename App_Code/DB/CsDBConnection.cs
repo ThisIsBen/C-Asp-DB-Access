@@ -98,7 +98,7 @@ using System.Web;
 
 
     #region transaction
-
+    /*
     public static void BegineTransaction(string transactionName) {
             if (batchTransation.Count == 0)
             {
@@ -195,6 +195,8 @@ using System.Web;
             }
             return connInt;
         }
+        */
     #endregion
+
 }
 

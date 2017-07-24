@@ -11,7 +11,7 @@ public partial class _Default : Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-
+        
 
        //insert a datum to ScoreDetailTB table      
         string ID = "112";
@@ -28,22 +28,21 @@ public partial class _Default : Page
         foreach (DataRow dr in dt.Rows)
         {
             //get the value of field StuCouHWDe_ID from ScoreDetailTB table
-            Response.Write("<script>console.log(" + dr.Field<string>("StuCouHWDe_ID") + ");</ script > ");
+            Response.Write("<script>console.log(" + dr.Field<string>("StuCouHWDe_ID") + ");</script> ");
 
             //get the value of field Grade from ScoreDetailTB table
-            Response.Write("<script>console.log(" + dr.Field<string>("Grade") + ");</ script > ");
+            Response.Write("<script>console.log(" + dr.Field<string>("Grade") + ");</script> ");
         }
 
-
+    
 
 
 
 
         
-        //ASK Update keep failing.
         //update a student's grade
-        string  aID = "111";
-        string NewGrade = "abd";
+        string  aID = "113";
+        string NewGrade = "\"78/5/0/20/20/20/18\"";
         Response.Write("<script>console.log(" + CsDBOp.UpdateScore( aID,  NewGrade) + ");</script>");
         /////////////////////////////////////
 
